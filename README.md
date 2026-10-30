@@ -23,12 +23,20 @@ W aplikacjach biznesowych, księgowych i operacyjnych nie ma miejsca na halucyna
 
 ## 🚀 Wyróżnione Projekty & Repozytoria
 
-### 1. [LogjiParse](https://github.com/kowalenko486-tech/LogjiParse) — AI Document & Invoice Parsing Microservice
+### 1. [accounting-ai-automator](https://github.com/kowalenko486-tech/accounting-ai-automator) — AI & Rules-Based Accounting Engine
+*Dedykowany mikroserwis w FastAPI do automatyzacji kluczowych procesów biura rachunkowego.*
+* **Tech:** Python 3.12, FastAPI, Pydantic v2 Gate, Pytest, GitHub Actions CI.
+* **Kluczowe cechy:**
+  * **Automatyczne księgowanie faktur na kontach:** generowanie zbilansowanych dekretów Wn/Ma (zespół 4, VAT naliczony 221, rozrachunki z dostawcami 201) z zachowaniem zasady podwójnego zapisu.
+  * **3-stopniowy silnik uzgadniania wyciągów bankowych (Reconciliation):** Tier 1 (Regex numeru FV + dokładna kwota, 100% pewności) $\rightarrow$ Tier 2 (Heurystyka Levenshteina dla kontrahenta) $\rightarrow$ Tier 3 (Asystent AI dla zaliczek i wpłat częściowych z Confidence Score).
+  * **Walidacja matematyczna sum kontrolnych:** NIP (modulo-11) oraz rachunków bankowych IBAN (ISO mod-97).
+
+### 2. [LogjiParse](https://github.com/kowalenko486-tech/LogjiParse) — AI Document & Invoice Parsing Microservice
 *Mikrousługa w FastAPI do automatycznej ekstrakcji i strukturyzacji danych z dokumentów biznesowych (faktury, zlecenia, CMR).*
 * **Tech:** Python 3.12, FastAPI, OpenAI API Structured Outputs, Pydantic v2, ReportLab PDF, Stripe & Webhooks, Supabase.
 * **Kluczowe cechy:** Zamiana niestrukturyzowanego tekstu/dokumentu w ścisły schemat JSON, automatyczne generowanie czytelnych raportów PDF oraz integracja płatności.
 
-### 2. [AGOS 4.1 Security & DLP Audit](https://github.com/kowalenko486-tech/agos-audit-) — Standalone External Security Validator
+### 3. [AGOS 4.1 Security & DLP Audit](https://github.com/kowalenko486-tech/agos-audit-) — Standalone External Security Validator
 *W pełni niezależna paczka walidacji bezpieczeństwa aplikacji zintegrowanych z AI i systemami zewnętrznymi.*
 * **Tech:** Python, Pytest, Docker, GitHub Actions CI, AST Static Analyzer.
 * **Kluczowe cechy:** 
@@ -36,16 +44,16 @@ W aplikacjach biznesowych, księgowych i operacyjnych nie ma miejsca na halucyna
   * AST-SAST & Anti-Slopsquatting (ochrona przed podatnościami `eval`, `shell=True` oraz halucynowanymi bibliotekami).
   * Odporność na Prompt Injection (benchmark 122 scenariuszy InjecAgent).
 
-### 3. InstallerCRM — Dedykowany System CRM / ERP dla Branży OZE & HVAC
+### 4. InstallerCRM — Dedykowany System CRM / ERP dla Branży OZE & HVAC
 *Kompleksowy system operacyjny (Single-Tenant / On-Premise) łączący frontend React 19 z backendem FastAPI.*
 * **Tech:** FastAPI, SQLAlchemy 2.0, React 19, TailwindCSS, Gemini 2.5 Flash, ReportLab, Docker Compose, Caddy.
 * **Kluczowe cechy:** Hybrydowy intake zapytań (AI + Regex) $\rightarrow$ Pydantic Gate $\rightarrow$ silnik wycen ROI i automatyczne generowanie 10-stronicowych ofert PDF. Szyfrowanie wrażliwych danych at-rest (**Fernet AES-128**).
 
-### 4. BlindCV SaaS — Platforma Rekrutacyjna z Płatnościami
+### 5. BlindCV SaaS — Platforma Rekrutacyjna z Płatnościami
 *Narzędzie SaaS do automatycznej anonimizacji danych osobowych (PII/RODO) w dokumentach aplikacyjnych.*
 * **Tech:** Next.js 15, TypeScript, Tailwind CSS, Supabase (PostgreSQL RLS, triggery), Lemon Squeezy (webhooki HMAC SHA-256).
 
-### 5. DockTime — Yard Management & Ramp Slot Booking System
+### 6. DockTime — Yard Management & Ramp Slot Booking System
 *System rezerwacji okien czasowych na rampach i zarządzania placem manewrowym.*
 * **Tech:** React, Vite, Node.js, Express, MongoDB, autorski Geofencing GPS (formuła Haversine'a), CI/CD na Railway.
 
